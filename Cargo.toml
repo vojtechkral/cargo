@@ -1,6 +1,6 @@
 [package]
-name = "cargo"
-version = "0.45.0"
+name = "vkcargo"
+version = "0.45.1"
 edition = "2018"
 authors = ["Yehuda Katz <wycats@gmail.com>",
            "Carl Lerche <me@carllerche.com>",
@@ -11,7 +11,8 @@ repository = "https://github.com/rust-lang/cargo"
 documentation = "https://docs.rs/cargo"
 readme = "README.md"
 description = """
-Cargo, a package manager for Rust.
+Fork of Cargo, a package manager for Rust.
+This fork is for testing of vojtechkral's changes and is temporary.
 """
 
 [lib]
@@ -105,13 +106,14 @@ features = [
 ]
 
 [dev-dependencies]
-cargo-test-macro = { path = "crates/cargo-test-macro", version = "0.1.0" }
-cargo-test-support = { path = "crates/cargo-test-support", version = "0.1.0" }
+# cargo-test-macro = { path = "crates/cargo-test-macro", version = "0.1.0" }
+# cargo-test-support = { path = "crates/cargo-test-support", version = "0.1.0" }
 
 [[bin]]
-name = "cargo"
+name = "vkcargo"
 test = false
 doc = false
+path = "src/bin/cargo/main.rs"
 
 [features]
 deny-warnings = []
